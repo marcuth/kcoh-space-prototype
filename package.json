@@ -1,0 +1,33 @@
+{
+  "name": "space-prototype",
+  "version": "1.0.0",
+  "description": "Um protótipo de projeto de frontend com TypeScript e HTML.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "copy:html": "copyfiles -u 1 \"./src/*.html\" dist",
+    "build": "npm run clean && tsc && npm run copy:html",
+    "dev": "run-p watch:ts serve:dev watch:html",
+    "start": "serve -s dist",
+    "watch:ts": "tsc --watch",
+    "serve:dev": "serve -s dist",
+    "watch:html": "onchange \"src/**/*.html\" -- copyfiles -u 1 {{changed}} dist"
+  },
+  "keywords": [
+    "typescript",
+    "frontend",
+    "html",
+    "projeto"
+  ],
+  "author": "Marcuth",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "rimraf": "^6.0.1",
+    "serve": "^14.2.3",
+    "typescript": "^5.9.2"
+  }
+}

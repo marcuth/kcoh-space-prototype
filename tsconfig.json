@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    // --- Configurações Principais ---
+
+    // Define o sistema de módulos. 'ESNext' é uma ótima opção para navegadores modernos
+    "module": "esnext", 
+    
+    // Onde os arquivos TypeScript estão.
+    "rootDir": "./src", 
+    
+    // Onde o código JavaScript compilado será salvo.
+    "outDir": "./dist", 
+    
+    // Versão do JavaScript de saída. 'ES6' é compatível com a maioria dos navegadores.
+    "target": "es6", 
+
+    // --- Verificação de Tipos e Estilo (Ótimo que você já tem!) ---
+
+    // Habilita todas as opções de verificação estrita.
+    "strict": true,
+    
+    // Garante que o acesso a arrays ou objetos com índices fora dos limites seja tratado como 'undefined'.
+    "noUncheckedIndexedAccess": true, 
+    
+    // Exige que propriedades opcionais sejam explicitamente marcadas.
+    "exactOptionalPropertyTypes": true,
+    
+    // Ignora a verificação de tipo para bibliotecas na pasta 'node_modules',
+    // o que melhora o desempenho da compilação.
+    "skipLibCheck": true, 
+
+    // --- Configurações Adicionais (Opcionais) ---
+
+    // Desabilite o source map no build final para um código mais limpo, se desejar.
+    "sourceMap": false, 
+    
+    // Não gera arquivos de declaração (.d.ts) para tipagem.
+    "declaration": false, 
+  },
+  
+  // Isso define quais arquivos o compilador deve incluir.
+  // Neste caso, ele vai procurar por arquivos .ts na pasta 'src'.
+  "include": ["src/**/*"] 
+}
