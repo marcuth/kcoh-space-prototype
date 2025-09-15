@@ -17,9 +17,18 @@ const game = {
             height: 3,
             color: "gray",
             side: "enemy"
-        }
+        },
+        {
+            id: "building2",
+            position: { x: 11, y: 5 },
+            width: 2,
+            height: 3,
+            color: "gray",
+            side: "enemy"
+        },
     ]
 }
+
 
 const canvas = document.querySelector("canvas")!
 const ctx = canvas.getContext("2d")!
