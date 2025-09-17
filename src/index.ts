@@ -49,5 +49,4 @@ function renderScreen() {
     requestAnimationFrame(renderScreen)
 }
 
-
 renderScreen()
